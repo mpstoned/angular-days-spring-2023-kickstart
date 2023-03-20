@@ -1,0 +1,22 @@
+{{ 'hallo' }} <br/>
+{{ 3 }} <br/>
+{{ 17 + 4 }} <br/>
+{{ '
+<div>Does this work?</div>' }} <br/>
+
+<hr/>
+
+{{helloValue }}<br/>
+{{numberValue | number:'0.1'}}<br/>
+{{numberValue | percent}}<br/>
+{{numberValue | currency:'CHF '}}<br/>
+
+{{helloValue | yell:'???' }}<br/>
+{{helloValue | yell:'!!!' }}<br/>
+
+<hr/>
+
+<div [style.backgroundColor]="color">Test</div>
+
+
+<button (click)="onClick($event)" (mousemove)="onMouseMove($event)">Click me.</button>
