@@ -1,11 +1,14 @@
-{{ 'hallo' }} <br/>
-{{ 3 }} <br/>
-{{ 17 + 4 }} <br/>
-{{ '
+
+<p>
+  inside app-component: <br/>
+
+  {{ 'hallo' }} <br/>
+  {{ 3 }} <br/>
+  {{ 17 + 4 }} <br/>
+  {{ '
 <div>Does this work?</div>' }} <br/>
 
 <hr/>
-
 {{helloValue }}<br/>
 {{numberValue | number:'0.1'}}<br/>
 {{numberValue | percent}}<br/>
@@ -20,3 +23,14 @@
 
 
 <button (click)="onClick($event)" (mousemove)="onMouseMove($event)">Click me.</button>
+<br/>
+<br/>
+
+<button (click)="toggle()">Toggle</button>
+<div *ngIf="show">
+  I am visible!
+</div>
+<ul>
+  <li *ngFor="let todo of todos">{{todo.name}}</li>
+</ul>
+<app-todo *ngFor="let todo of todos" [todo]="todo" (done)="catchDoneEvent($event)"></app-todo>
