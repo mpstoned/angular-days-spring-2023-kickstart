@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ElementRef} from '@angular/core';
 import {TodoService} from "./service/todo.service";
 import {Todo} from "./models/todo";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,13 @@ export class AppComponent {
   public color = 'hotpink';
   // public todoObject = { name: "Wash clothes", done: false, id: 3 };
   public show = true;
-  todos: Todo[] = []
+  public todos$: Observable<Todo[]>;
 
   constructor(private readonly elementRef: ElementRef,
               private readonly todoService: TodoService){
     console.log("elementRef from constructor", elementRef);
 
-    todoService.getAll().subscribe(todos => this.todos = todos);
+    this.todos$ = todoService.getAll();
   }
 
 

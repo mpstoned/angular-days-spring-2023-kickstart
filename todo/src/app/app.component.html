@@ -1,36 +1,49 @@
 
-<p>
-  inside app-component: <br/>
+<!--<p>-->
+<!--  inside app-component: <br/>-->
 
-  {{ 'hallo' }} <br/>
-  {{ 3 }} <br/>
-  {{ 17 + 4 }} <br/>
-  {{ '
-<div>Does this work?</div>' }} <br/>
+<!--  {{ 'hallo' }} <br/>-->
+<!--  {{ 3 }} <br/>-->
+<!--  {{ 17 + 4 }} <br/>-->
+<!--  {{ '-->
+<!--<div>Does this work?</div>' }} <br/>-->
 
-<hr/>
-{{helloValue }}<br/>
-{{numberValue | number:'0.1'}}<br/>
-{{numberValue | percent}}<br/>
-{{numberValue | currency:'CHF '}}<br/>
+<!--<hr/>-->
+<!--{{helloValue }}<br/>-->
+<!--{{numberValue | number:'0.1'}}<br/>-->
+<!--{{numberValue | percent}}<br/>-->
+<!--{{numberValue | currency:'CHF '}}<br/>-->
 
-{{helloValue | yell:'???' }}<br/>
-{{helloValue | yell:'!!!' }}<br/>
+<!--{{helloValue | yell:'???' }}<br/>-->
+<!--{{helloValue | yell:'!!!' }}<br/>-->
 
-<hr/>
+<!--<hr/>-->
 
-<div [style.backgroundColor]="color">Test</div>
+<!--<div [style.backgroundColor]="color">Test</div>-->
 
 
-<button (click)="onClick($event)" (mousemove)="onMouseMove($event)">Click me.</button>
-<br/>
-<br/>
+<!--<button (click)="onClick($event)" (mousemove)="onMouseMove($event)">Click me.</button>-->
+<!--<br/>-->
+<!--<br/>-->
 
-<button (click)="toggle()">Toggle</button>
-<div *ngIf="show">
-  I am visible!
-</div>
+<!--<button (click)="toggle()">Toggle</button>-->
+<!--<div *ngIf="show">-->
+<!--  I am visible!-->
+<!--</div>-->
+
+
+
+<div *ngIf="todos$ | async as todos">You have {{ todos.length }} todos!</div>
+
 <ul>
-  <li *ngFor="let todo of todos">{{todo.name}}</li>
+  <li *ngFor="let todo of todos$ | async">
+    {{ todo.name }}
+  </li>
 </ul>
-<app-todo *ngFor="let todo of todos" [todo]="todo" (done)="catchDoneEvent($event)"></app-todo>
+
+<app-todo
+  *ngFor="let todo of todos$ | async"
+  [todo]="todo"
+  (done)="catchDoneEvent($event)"
+></app-todo>
+

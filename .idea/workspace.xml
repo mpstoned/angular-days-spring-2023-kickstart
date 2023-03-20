@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44465ace-76df-48b7-b117-c0de5b069f33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/todo/src/app/todo/todo.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="44465ace-76df-48b7-b117-c0de5b069f33" name="Changes" comment="commit 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/src/app/todo/todo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/app/todo/todo.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +73,16 @@
       <option name="presentableId" value="Default" />
       <updated>1679300327771</updated>
       <workItem from="1679300332449" duration="3366000" />
-      <workItem from="1679304097097" duration="10060000" />
+      <workItem from="1679304097097" duration="10424000" />
     </task>
+    <task id="LOCAL-00001" summary="commit 1">
+      <created>1679320457921</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679320457921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,5 +98,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 1" />
   </component>
 </project>
